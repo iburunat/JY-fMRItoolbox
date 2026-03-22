@@ -1,0 +1,35 @@
+/* Example: change primary color of RTD theme */
+.wy-side-nav-search {
+    background-color: #003366; /* University dark blue */
+}
+
+/* Sidebar background and full-height orange borders */
+.wy-nav-side {
+  background: #002957;           /* dark blue sidebar */
+  border-left: 3px solid #f1563f;  /* left orange line */
+  border-right: 3px solid #f1563f; /* right orange line */
+  min-height: 100vh;             /* full viewport height */
+}
+
+/* Optional: hover links in the sidebar */
+.wy-nav-side a {
+  color: #ffffff;  /* keep links white for contrast */
+}
+
+.wy-nav-side a:hover {
+  color: #f1563f;  /* highlight link hover in orange */
+}
+
+
+.wy-side-nav-top {
+    background-color: #004488;
+}
+
+.rst-content h1 {
+    color: #0055aa;
+}
+
+/* body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+} */
