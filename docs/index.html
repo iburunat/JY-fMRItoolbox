@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>JY-fMRItoolbox</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div style="height:4px;background:linear-gradient(90deg, var(--accent2) 0%, var(--accent) 100%);"></div>
+<nav>
+  <div style="display:flex; align-items:center; gap:0.8rem;">
+    <a class="nav-brand" href="#">
+      <img src="JY-fMRItoolbox_logo.jpg" alt="JY-fMRItoolbox logo" style="height:28px; margin-right:0.6rem; vertical-align:middle;"/>
+      <span>JY</span>-fMRItoolbox
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#modules">Modules</a></li>
+    <li><a href="#atlases">Atlases</a></li>
+    <li><a href="#install">Install</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="https://github.com" target="_blank">GitHub ↗</a></li>
+  </ul>
+</nav>
+
+
+<div class="hero-wrap">
+  <div class="hero-left">
+<!-- <div class="hero-tag">Open-source · MATLAB · MIT Licence · University of Jyväskylä</div>    <!-- you can remove this --> 
+
+<div class="hero-tag">
+  <a href="https://github.com/[author]/JY-fMRItoolbox" target="_blank" style="color:inherit; text-decoration:none;">Open-source</a>
+  · 
+  <a href="https://www.mathworks.com/products/matlab.html" target="_blank" style="color:inherit; text-decoration:none;">MATLAB</a>
+  · 
+  <a href="https://opensource.org/licenses/MIT" target="_blank" style="color:inherit; text-decoration:none;">MIT Licence</a>
+  · 
+  <a href="https://www.jyu.fi/en" target="_blank" style="color:inherit; text-decoration:none;">University of Jyväskylä</a>
+</div>
+
+
+    <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+  <img src="JY-fMRItoolbox_logo.jpg" 
+       alt="JYU logo" style="height:60px;"/>
+  <span style="font-family:var(--sans); font-size:3rem; font-weight:700; color:var(--accent2);">
+    <em style="color:var(--accent); font-style:normal;">JY</em>-fMRItoolbox
+  </span>
+</div>
+    
+    <h1>Transparent fMRI analysis,<br><em>one voxel at a time.</em></h1>
+    <p class="hero-sub">A lightweight MATLAB toolbox for post-preprocessing human fMRI analysis. All functions share one 228,453-element MNI152 brain vector — no frameworks, no compiled code, no hidden steps. Built for naturalistic paradigms. In use since 2012.</p>
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="https://github.com" target="_blank">⬇ Download</a>
+      <a class="btn btn-primary" href="#">📄 Preprint</a>
+      <a class="btn btn-primary" href="#">📖 Documentation</a>
+    </div>
+    <div class="stats-inline">
+      <div><span class="stat-n">70</span><span class="stat-l">Functions</span></div>
+      <div><span class="stat-n">19</span><span class="stat-l">Atlases</span></div>
+      <div><span class="stat-n">20+</span><span class="stat-l">Publications</span></div>
+      <div><span class="stat-n">0</span><span class="stat-l">Compiled files</span></div>
+      <div><span class="stat-n">2012</span><span class="stat-l">In use since</span></div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="code-header">
+      <div class="code-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+      <span class="code-title">hippocampal_fc.m — group-level seed connectivity</span>
+      <span></span>
+    </div>
+
+    <div class="code-body" id="codeBody">
+      <!-- Code lines -->
+      <div class="code-line"><span class="ln">1</span><span class="lc"><span class="c-v">n_subj</span> = <span class="c-n">5</span>;  <span class="c-v">r_maps</span> = <span class="c-f">zeros</span>(<span class="c-n">228453</span>, <span class="c-v">n_subj</span>);</span></div>
+      <div class="code-line"><span class="ln">2</span><span class="lc"><span class="c-v">seed</span>   = <span class="c-f">fmri_sub2ind</span>(<span class="c-f">fmri_mni2sub</span>([-<span class="c-n">24</span> -<span class="c-n">18</span> -<span class="c-n">18</span>]));</span></div>
+      <div class="code-line"><span class="ln"> </span><span class="lc"> </span></div>
+      <div class="code-line"><span class="ln">3</span><span class="lc"><span class="c-k">for</span> <span class="c-v">s</span> = <span class="c-n">1</span>:<span class="c-v">n_subj</span></span></div>
+      <div class="code-line"><span class="ln">4</span><span class="lc">  [<span class="c-v">vol</span>,~] = <span class="c-f">fmri_readnii</span>(<span class="c-f">sprintf</span>(<span class="c-s">'sub-%02d_bold.nii'</span>,<span class="c-v">s</span>));</span></div>
+      <div class="code-line"><span class="ln">5</span><span class="lc">  <span class="c-v">data</span>   = <span class="c-f">fmri_vol2vect</span>(<span class="c-v">vol</span>);  <span class="c-c">% → 228453 × T</span></span></div>
+      <div class="code-line"><span class="ln">6</span><span class="lc">  <span class="c-v">data</span>   = <span class="c-f">fmri_correctmovement</span>(<span class="c-v">data</span>', <span class="c-f">sprintf</span>(<span class="c-s">'rp_%02d.txt'</span>,<span class="c-v">s</span>))';</span></div>
+      <div class="code-line"><span class="ln">7</span><span class="lc">  <span class="c-v">data</span>   = <span class="c-f">fmri_detrend</span>(<span class="c-v">data</span>, <span class="c-n">6</span>);</span></div>
+      <div class="code-line"><span class="ln">8</span><span class="lc">  <span class="c-v">data</span>   = <span class="c-f">fmri_tempsmooth</span>(<span class="c-v">data</span>, <span class="c-n">4</span>);</span></div>
+      <div class="code-line"><span class="ln">9</span><span class="lc">  <span class="c-v">r_maps</span>(:,<span class="c-v">s</span>) = <span class="c-f">fmri_corregressor</span>(<span class="c-v">data</span>(<span class="c-v">seed</span>,:)', <span class="c-v">data</span>);</span></div>
+      <div class="code-line"><span class="ln">10</span><span class="lc">  <span class="c-v">df_all</span>(<span class="c-v">s</span>) = <span class="c-f">mean</span>(<span class="c-f">arrayfun</span>(@(<span class="c-v">v</span>) <span class="c-f">fmri_effdf</span>(<span class="c-v">data</span>(<span class="c-v">seed</span>,:)', <span class="c-v">data</span>(<span class="c-v">v</span>,:)'), <span class="c-f">randperm</span>(<span class="c-n">228453</span>, <span class="c-n">1000</span>)));</span></div>
+      <div class="code-line"><span class="ln">11</span><span class="lc"><span class="c-k">end</span></span></div>
+      <div class="code-line"><span class="ln"> </span><span class="lc"> </span></div>
+      <div class="code-line"><span class="ln">12</span><span class="lc"><span class="c-v">z_group</span> = <span class="c-f">mean</span>(<span class="c-f">fmri_fisherz</span>(<span class="c-v">r_maps</span>, <span class="c-f">mean</span>(<span class="c-v">df_all</span>)), <span class="c-n">2</span>);</span></div>
+      <div class="code-line"><span class="ln">13</span><span class="lc"><span class="c-v">clean</span>   = <span class="c-f">fmri_cleanclusters</span>(<span class="c-v">z_group</span> &gt; <span class="c-n">3</span>, <span class="c-n">50</span>, <span class="c-n">0</span>); <span class="c-c">% z>3 ≈ p&lt;0.001</span></span></div>
+      <div class="code-line"><span class="ln">14</span><span class="lc"><span class="c-f">fmri_regiontable</span>(<span class="c-v">clean</span>, <span class="c-v">z_group</span>, <span class="c-n">50</span>, <span class="c-n">10</span>, <span class="c-n">1</span>);</span></div>
+      <div class="code-line"><span class="ln">15</span><span class="lc"><span class="c-f">fmri_braincake</span>(<span class="c-v">z_group<span class="c-n">)</span></div>
+
+      <!-- Overlay container — appears on hover -->
+      <div class="overlay-container" id="overlayContainer"></div>
+      <!-- <div class="code-hint">hover to reveal steps</div> -->
+    </div>    
+
+
+<div class="brain-figure">
+  <img src="braincake2.png" alt="Brain map — fmri_braincake output"/>
+</div>
+
+  </div>
+
+</div>
+
+<hr class="divider"/>
+
+<!-- Modules -->
+<div class="section" id="modules">
+  <div class="section-label">Architecture</div>
+  <h2>Eight composable modules</h2>
+  <p class="section-intro">Every module shares the same brain vector format — mix and match freely, no conversion needed.</p>
+  <div class="module-grid">
+    <div class="module-card"><div class="module-icon" style="background:rgba(88,166,255,0.12);">📂</div><div class="module-name">I/O &amp; Space</div><div class="module-desc">Read/write NIfTI, coordinate transforms, MNI ↔ voxel ↔ index conversions.</div><div class="module-fns">fmri_readnii · fmri_vol2vect · fmri_mni2sub · fmri_ind2sub · fmri_mirror</div></div>
+    <div class="module-card"><div class="module-icon" style="background:rgba(210,153,34,0.12);">⚙️</div><div class="module-name">Temporal Preprocessing</div><div class="module-desc">Detrending, bandpass filtering, motion regression, Wiener deconvolution (for HRF inversion).</div><div class="module-fns">fmri_detrend · fmri_bandpassfilter · fmri_correctmovement · fmri_wiener</div></div>
+    <div class="module-card"><div class="module-icon" style="background:rgba(127,119,221,0.12);">🗺️</div><div class="module-name">ROI System</div><div class="module-desc">19 atlases via unified interface. Masks, region lookup, voxel↔ROI mapping.</div><div class="module-fns">fmri_atlas · fmri_regionmask · fmri_vox2reg · fmri_regiontable · fmri_loadatlas</div></div>
+    <div class="module-card"><div class="module-icon" style="background:rgba(29,158,117,0.12);">📊</div><div class="module-name">Analysis</div><div class="module-desc">Voxelwise GLM, cross-correlation, partial correlation, computation of effective df.</div><div class="module-fns">fmri_corregressor · fmri_xcorr · fmri_partcorr · fmri_effdf · fmri_r2p</div></div>
+    <div class="module-card"><div class="module-icon" style="background:rgba(248,81,73,0.12);">🔬</div><div class="module-name">Statistical Inference</div><div class="module-desc">Phase scrambling, TFCE + ACF cluster inference, cluster cleaning.</div><div class="module-fns">fmri_scramblephases · fmri_tfce · fmri_acfestimate · fmri_csdist · fmri_cleanclusters · fmri_findclusters</div></div>
+    <div class="module-card"><div class="module-icon" style="background:rgba(63,185,80,0.12);">🖼️</div><div class="module-name">Visualisation</div><div class="module-desc">Slice mosaics, 3D isosurface, cortical surface, brain 'cake', rotating video.</div><div class="module-fns">fmri_showslices · fmri_show3d · fmri_showcortex · fmri_braincake · fmri_brainvideo</div></div>
+    <div class="module-card"><div class="module-icon" style="background:rgba(57,211,83,0.12);">🧪</div><div class="module-name">Simulation</div><div class="module-desc">Synthetic 4D fMRI: angular-noise blobs, HRF convolution, FFT inter-subject variability.</div><div class="module-fns">fmri_simdata · fmri_simget · fmri_doublegamma</div></div>
+    <div class="module-card"><div class="module-icon" style="background:rgba(139,148,158,0.12);">📈</div><div class="module-name">Quality Control</div><div class="module-desc">Image-domain SNR, temporal SNR, contrast-to-noise ratio.</div><div class="module-fns">fmri_snri · fmri_snrt · fmri_cnr</div></div>
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- Why -->
+<div class="section" id="why" style="background:#f8f9fc;">
+  <div class="section-label">Design principles and philosophy</div>
+  <h2 style="color:#1a2b5e;">Born from naturalistic neuroscience</h2>
+  <div class="feature-cols">
+    <div class="feature"><span class="feature-check">✓</span><span class="feature-text"><strong>Uniform representation.</strong> All functions share a single 228,453-element MNI152 vector — output of any function is valid input to any other.</span></div>
+    <div class="feature"><span class="feature-check">✓</span><span class="feature-text"><strong>Zero compiled code.</strong> Every function is a short, readable .m file. No MEX, no black-box steps, no hidden state.</span></div>
+    <div class="feature"><span class="feature-check">✓</span><span class="feature-text"><strong>Naturalistic-first.</strong> Designed for continuous-feature paradigms where standard GLM pipelines don't apply.</span></div>
+    <div class="feature"><span class="feature-check">✓</span><span class="feature-text"><strong>Minimal dependencies.</strong> Base MATLAB only. SPM needed for six cluster functions only.</span></div>
+    <div class="feature"><span class="feature-check">✓</span><span class="feature-text"><strong>Robust cluster inference.</strong> Two complementary cluster inference approaches — empirical null distributions and TFCE — without requiring Gaussian assumptions.</span></div>
+    <div class="feature"><span class="feature-check">✓</span><span class="feature-text"><strong>19 bundled atlases.</strong> AAL to Craddock, all via a single integer-indexed interface.</span></div>
+    
+  </div>
+</div>
+
+<hr class="divider"/>
+
+<!-- <div class="figure-banner">
+  <img src="braincake.png" alt="Brain map — fmri_braincake output"/>
+</div> -->
+
+
+<!-- Atlases -->
+<div class="section" id="atlases">
+  <div class="section-label">ROI system</div>
+  <h2>19 brain atlases, one interface</h2>
+  <p class="section-intro">Access any atlas with <code style="font-family:var(--mono);font-size:11px;background:#e8ecf4;color:#1a2b5e;padding:2px 7px;border-radius:4px;border:1px solid #c0cce0;font-weight:500;">fmri_atlas(n)</code> — no external toolbox required.</p>
+
+  <div class="atlas-grid">
+      <div class="atlas-item"><span class="atlas-name"><a href="https://www.gin.cnrs.fr/en/tools/aal/" target="_blank">AAL / MarsBar</a></span><span class="atlas-rois">116</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1016/j.schres.2005.11.020" target="_blank">Harvard-Oxford Sub.</a></span><span class="atlas-rois">21</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1016/j.schres.2005.11.020" target="_blank">Harvard-Oxford Cort.</a></span><span class="atlas-rois">48</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1016/j.neuroimage.2009.01.045" target="_blank">Cerebellar FLIRT</a></span><span class="atlas-rois">28</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1016/j.neuroimage.2009.01.045" target="_blank">Cerebellar FNIRT</a></span><span class="atlas-rois">28</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1016/j.neuroimage.2007.07.053" target="_blank">JHU WM Labels</a></span><span class="atlas-rois">48</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1016/j.neuroimage.2007.07.053" target="_blank">JHU WM Tracts</a></span><span class="atlas-rois">20</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1016/j.neuroimage.2004.12.034" target="_blank">Juelich Histological</a></span><span class="atlas-rois">62</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1109/NSSMIC.1993.373602" target="_blank">MNI Structural</a></span><span class="atlas-rois">9</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1016/j.neuroimage.2010.06.044" target="_blank">Oxford-Imanova (struct.)</a></span><span class="atlas-rois">3</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1016/j.neuroimage.2010.06.044" target="_blank">Oxford-Imanova (conn. 3)</a></span><span class="atlas-rois">3</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1016/j.neuroimage.2010.06.044" target="_blank">Oxford-Imanova (conn. 7)</a></span><span class="atlas-rois">7</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1038/nn1075" target="_blank">Oxford Thalamic</a></span><span class="atlas-rois">7</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1002/hbm.21333" target="_blank">Craddock 200</a></span><span class="atlas-rois">200</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1002/hbm.21333" target="_blank">Craddock 400</a></span><span class="atlas-rois">400</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1002/hbm.21333" target="_blank">Craddock 500</a></span><span class="atlas-rois">500</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1002/hbm.21333" target="_blank">Craddock 600</a></span><span class="atlas-rois">600</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1002/hbm.21333" target="_blank">Craddock 950</a></span><span class="atlas-rois">950</span></div>
+      <div class="atlas-item"><span class="atlas-name"><a href="https://doi.org/10.1080/00207450600765676" target="_blank">Brodmann Areas</a></span><span class="atlas-rois">48</span></div>
+    </div>
+  </div>
+</div>
+
+
+<hr class="divider"/>
+
+<!-- Install -->
+<div class="section" id="install">
+  <div class="section-label">Getting started</div>
+  <h2>Install in 30 seconds</h2>
+  <p class="section-intro">No compilation, no configuration files, no package manager.</p>
+  <div class="install-box">
+    <div class="install-row"><span class="install-step">1</span><span class="install-code">git clone https://github.com/[author]/JY-fMRItoolbox</span><span class="install-desc">Clone repository</span></div>
+    <div class="install-row"><span class="install-step">2</span><span class="install-code">run('/path/to/JY-fMRItoolbox/fmritoolbox_setup.m')</span><span class="install-desc">Add to MATLAB path</span></div>
+    <div class="install-row"><span class="install-step">3</span><span class="install-code">fmri_atlas()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;% browse 19 atlases</span><span class="install-desc">Explore</span></div>
+    <div class="install-row"><span class="install-step">4</span><span class="install-code">demo_naturalistic_pipeline&nbsp;% full worked demo</span><span class="install-desc">Run demo</span></div>
+  </div>
+  <p style="margin-top:0.7rem;font-size:11px;color:#908a8a;font-family:var(--mono);">Requires MATLAB R2014b+. SPM8+ required only for six cluster inference functions.</p>
+</div>
+
+<hr class="divider"/>
+
+<!-- Publications -->
+<div class="section" id="publications">
+  <div class="section-label">Track record</div>
+  <h2>In active use since 2012</h2>
+  <p class="section-intro">Cited in 20+ peer-reviewed publications across leading neuroscience journals.</p>
+  <div class="pub-list">
+    <div class="pub-item"><span class="pub-year">2024</span><div><div class="pub-journal">PNAS</div><div class="pub-title"><a href="https://doi.org/10.1073/pnas.2319459121" target="_blank">Breaking (musical) boundaries by investigating brain dynamics of event segmentation during real-life music-listening</a></div><div class="pub-authors">Burunat, Levitin & Toiviainen</div></div></div>
+    <div class="pub-item"><span class="pub-year">2020</span><div><div class="pub-journal">NeuroImage</div><div class="pub-title"><a href="https://doi.org/10.1016/j.neuroimage.2019.116191" target="_blank">The chronnectome of musical beat</a></div><div class="pub-authors">Toiviainen, Burunat, Brattico, Vuust & Alluri</div></div></div>
+    <div class="pub-item"><span class="pub-year">2018</span><div><div class="pub-journal">Scientific Reports</div><div class="pub-title"><a href="https://doi.org/10.1038/s41598-018-19177-5" target="_blank">Decoding musical training from dynamic processing of musical features in the brain</a></div><div class="pub-authors">Saari, Burunat, Brattico & Toiviainen</div></div></div>
+    <div class="pub-item"><span class="pub-year">2017</span><div><div class="pub-journal">Human Brain Mapping</div><div class="pub-title"><a href="https://doi.org/10.1002/hbm.23565" target="_blank">Connectivity patterns during music listening: evidence for action-based processing in musicians</a></div><div class="pub-authors">Alluri, Toiviainen, Burunat, Kliuchko, Vuust & Brattico</div></div></div>
+    <div class="pub-item"><span class="pub-year">2014</span><div><div class="pub-journal">NeuroImage</div><div class="pub-title"><a href="https://doi.org/10.1016/j.neuroimage.2013.11.017" target="_blank">Capturing the musical brain with Lasso: dynamic decoding of musical features from fMRI data</a></div><div class="pub-authors">Toiviainen, Alluri, Brattico, Wallentin & Vuust</div></div></div>
+    <div class="pub-item"><span class="pub-year">2012</span><div><div class="pub-journal">NeuroImage</div><div class="pub-title"><a href="https://doi.org/10.1016/j.neuroimage.2011.11.019" target="_blank">Large-scale brain networks emerge from dynamic processing of musical timbre, key and rhythm</a></div><div class="pub-authors">Alluri, Toiviainen, Jääskeläinen, Glerean, Sams & Brattico</div></div></div>
+  </div>
+  <p style="margin-top:0.8rem;font-size:11px;color:#3a4e66;">+ 14 additional publications in Frontiers in Human Neuroscience, Cortex, PLOS ONE, Brain Sciences, and others.</p>
+</div>
+
+
+<hr class="divider"/>
+<footer>
+  JY-fMRItoolbox · University of Jyväskylä · MIT Licence ·
+  <a href="https://github.com" target="_blank">GitHub</a> ·
+  <a href="#">Preprint</a> ·
+  <a href="#">Documentation</a> ·
+  Burunat, Alluri & Toiviainen (in preparation, 2026)
+</footer>
+
+<script>
+(function() {
+  const lineH  = 22.8; // 12px * 1.9.  /* this must tightly match the line height in CSS or else the hover will be misaligned! */   
+  const topPad = 16;
+
+  const steps = [
+  { num: '01', label: 'INITIALISE',              start: 0,  end: 1  },
+  { num: '02', label: 'DEFINE SEED VOXEL',       start: 2,  end: 2  },
+  { num: '03', label: 'LOAD NIfTI',              start: 4,  end: 4  },
+  { num: '04', label: 'VECTORISE DATA',          start: 5,  end: 5  },
+  { num: '05', label: 'MOTION REGRESSION',       start: 6,  end: 6  },
+  { num: '06', label: 'DETREND',                 start: 7,  end: 7  },
+  { num: '07', label: 'TEMPORAL SMOOTHING',      start: 8,  end: 8  },
+  { num: '08', label: 'SEED CORRELATION',        start: 9,  end: 9  },
+  { num: '09', label: 'EFFECTIVE df',            start: 10, end: 10 },
+  { num: '10', label: 'FISHER Z GROUP AVERAGE',  start: 13, end: 13 },
+  { num: '11', label: 'CLUSTER INFERENCE',       start: 14, end: 14 },
+  { num: '12', label: 'ATLAS LABELS + VISUALISE',start: 15, end: 16 },
+];
+
+  const container = document.getElementById('overlayContainer');
+
+  // Backdrop — dims non-hovered code when a block is active
+  const backdrop = document.createElement('div');
+  backdrop.className = 'overlay-backdrop';
+  container.appendChild(backdrop);
+
+  const blocks = [];
+
+  steps.forEach(step => {
+    const top    = topPad + step.start * lineH;
+    const height = (step.end - step.start + 1) * lineH;
+
+    const block = document.createElement('div');
+    block.className = 'overlay-block';
+    block.style.top    = top + 'px';
+    block.style.height = height + 'px';
+    block.innerHTML = `
+      <span class="overlay-num">${step.num}</span>
+      <div class="overlay-divider"></div>
+      <span class="overlay-label">${step.label}</span>
+    `;
+
+    block.addEventListener('mouseenter', () => {
+      container.classList.add('active', 'any-hovered');
+      blocks.forEach(b => b.classList.remove('hovered'));
+      block.classList.add('hovered');
+    });
+
+    block.addEventListener('mouseleave', () => {
+      block.classList.remove('hovered');
+      container.classList.remove('any-hovered');
+    });
+
+    container.appendChild(block);
+    blocks.push(block);
+  });
+
+  // Make the whole code body activate pointer events on container
+  const codeBody = document.getElementById('codeBody');
+  codeBody.addEventListener('mouseenter', () => {
+    container.classList.add('active');
+  });
+  codeBody.addEventListener('mouseleave', () => {
+    container.classList.remove('active', 'any-hovered');
+    blocks.forEach(b => b.classList.remove('hovered'));
+  });
+})();
+</script>
+
+</body>
+</html>
