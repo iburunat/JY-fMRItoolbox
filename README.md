@@ -1,10 +1,7 @@
 <table border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td valign="middle">
-      <img src="docs/JY-fMRItoolbox_logo.jpg" alt="JY-fMRItoolbox logo" height="80"/>
-    </td>
-    <td valign="middle">
-      <h1>&nbsp;JY-fMRIToolbox</h1>
+      <img src="source/_static/logo.png" alt="JY-fMRItoolbox logo" height="120"/>
     </td>
   </tr>
 </table>
