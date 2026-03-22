@@ -1,4 +1,13 @@
-# JY-fMRIToolbox 
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="middle">
+      <img src="docs/JY-fMRItoolbox_logo.jpg" alt="JY-fMRItoolbox logo" height="80"/>
+    </td>
+    <td valign="middle">
+      <h1>&nbsp;JY-fMRIToolbox</h1>
+    </td>
+  </tr>
+</table>
 
 A lightweight, transparent MATLAB toolbox for human fMRI analysis.
 
