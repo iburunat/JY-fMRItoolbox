@@ -1,7 +1,7 @@
+[![Documentation Status](https://readthedocs.org/projects/jy-fmritoolbox/badge/?version=latest)](https://jy-fmritoolbox.readthedocs.io/en/latest/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)
-[![MATLAB](https://img.shields.io/badge/MATLAB-R2014b%2B-blue.svg)](https://www.mathworks.com/products/matlab.html)
 [![DOI](https://zenodo.org/badge/1188857124.svg)](https://doi.org/10.5281/zenodo.19173637)
-[![GitHub release](https://img.shields.io/github/v/release/jy-fmritoolbox/jy-fmritoolbox)](https://github.com/jy-fmritoolbox/jy-fmritoolbox/releases)
+[![GitHub release](https://img.shields.io/github/v/release/iburunat/JY-fMRItoolbox?include_prereleases)](https://github.com/iburunat/JY-fMRItoolbox/releases)
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey.svg)]()
 
 <table border="0" cellpadding="0" cellspacing="0">
@@ -14,7 +14,7 @@
 
 A lightweight, transparent MATLAB toolbox for human fMRI analysis.
 
-## Documentation [![Documentation Status](https://readthedocs.org/projects/jy-fmritoolbox/badge/?version=latest)](https://jy-fmritoolbox.readthedocs.io/en/latest/)
+## Documentation 
 
 Full documentation is available at 📖 [ReadTheDocs](https://jy-fmritoolbox.readthedocs.io/en/latest/)
 
