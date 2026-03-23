@@ -28,7 +28,7 @@ end
 addpath(toolbox_root);
 
 % ── NIFTI I/O dependency (bundled) ────────────────────────────────────────
-nifti_path = fullfile(toolbox_root, 'Toolboxes', 'NIFTI_20130306');
+nifti_path = fullfile(toolbox_root, 'external', 'NIFTI_20130306');
 if exist(nifti_path, 'dir')
     addpath(nifti_path);
 else
@@ -39,8 +39,8 @@ else
         nifti_path);
 end
 
-% ── matFiles (brain masks, rendering meshes) ──────────────────────────────
-mat_path = fullfile(toolbox_root, 'matFiles');
+% ── masks (brain masks, rendering meshes) ──────────────────────────────
+mat_path = fullfile(toolbox_root, 'masks');
 if exist(mat_path, 'dir')
     addpath(mat_path);
 end
