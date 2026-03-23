@@ -15,6 +15,10 @@
 
 A lightweight, transparent MATLAB toolbox for human fMRI analysis.
 
+## Documentation [![Documentation Status](https://readthedocs.org/projects/jy-fmritoolbox/badge/?version=latest)](https://jy-fmritoolbox.readthedocs.io/en/latest/)
+
+Full documentation is available at **[jy-fmritoolbox.readthedocs.io](https://jy-fmritoolbox.readthedocs.io/en/latest/)**
+
 ## Philosophy
 
 JY-fMRIToolbox is designed to be **inspectable**. Every function is a single readable `.m` file. There are no compiled MEX binaries, no black-box pipelines, and no hidden state. If you want to understand what the toolbox does, you read the code.
