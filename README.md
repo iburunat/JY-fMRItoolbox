@@ -12,7 +12,9 @@
   </tr>
 </table>
 
-A lightweight, transparent MATLAB toolbox for human fMRI analysis.
+A lightweight, transparent MATLAB toolbox for human fMRI analysis.  
+Built for continuous-feature, naturalistic paradigms, where conventional GLM approaches fall short.  
+In active use since 2012. Now publically available.
 
 ## Documentation 
 
@@ -115,9 +117,9 @@ Run `demo_naturalistic_pipeline.m` for a complete end-to-end demonstration requi
 
 If you use this toolbox in published work, please cite:
 
-> [Authors]. JY-fMRItoolbox: a lightweight MATLAB toolbox for transparent fMRI analysis. *NeuroImage*, [year]. doi: [doi]
-
-A BibTeX entry is available in `CITATION.cff`.
+> Burunat, I., Alluri, V. & Toiviainen, P. JY-fMRItoolbox: A lightweight MATLAB toolbox for transparent fMRI analysis. Zenodo, 2026. [https://doi.org/10.5281/zenodo.19173638](https://zenodo.org/records/19173638)
+ 
+A BibTeX entry wil be available in `CITATION.cff`.
 
 ## License
 
