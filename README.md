@@ -1,20 +1,30 @@
-[![Documentation Status](https://readthedocs.org/projects/jy-fmritoolbox/badge/?version=latest)](https://jy-fmritoolbox.readthedocs.io/en/latest/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/1188857124.svg)](https://doi.org/10.5281/zenodo.19173637)
-[![GitHub release](https://img.shields.io/github/v/release/iburunat/JY-fMRItoolbox?include_prereleases)](https://github.com/iburunat/JY-fMRItoolbox/releases)
-[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey.svg)]()
+<p align="center">
+  <img src="source/_static/logo.png" alt="JY-fMRItoolbox logo" height="170"/>
+</p>
 
-<table border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td valign="middle">
-      <img src="source/_static/logo.png" alt="JY-fMRItoolbox logo" height="160"/>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <i>A lightweight, transparent MATLAB toolbox for human fMRI analysis. </br>
+  Built for continuous-feature, naturalistic paradigms, where conventional GLM approaches fall short.   </br>
+In active use since 2012. Now publically available.</i>
+</p>
 
-A lightweight, transparent MATLAB toolbox for human fMRI analysis.  
-Built for continuous-feature, naturalistic paradigms, where conventional GLM approaches fall short.  
-In active use since 2012. Now publically available.
+<p align="center">
+  <a href="https://jy-fmritoolbox.readthedocs.io/en/latest/">
+    <img src="https://readthedocs.org/projects/jy-fmritoolbox/badge/?version=latest">
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-orange.svg">
+  </a>
+  <a href="https://doi.org/10.5281/zenodo.19173637">
+    <img src="https://zenodo.org/badge/1188857124.svg">
+  </a>
+  <a href="https://github.com/iburunat/JY-fMRItoolbox/releases">
+    <img src="https://img.shields.io/github/v/release/iburunat/JY-fMRItoolbox?include_prereleases">
+  </a>
+  <img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey.svg">
+</p>
+
+<hr>
 
 ## Documentation 
 
