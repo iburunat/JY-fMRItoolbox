@@ -1,6 +1,8 @@
 ===========================
 JY-fMRItoolbox Documentation
 ===========================
+Welcome to **JY-fMRItoolbox**, a MATLAB toolbox for human fMRI preprocessing, analysis and visualization.  
+Designed for researchers who want full control and transparency over every step of fMRI analysis.
 
 .. raw:: html
 
@@ -9,14 +11,11 @@ JY-fMRItoolbox Documentation
             style="max-width:90%; height:auto; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.2);"/>
    </div>
 
-Welcome to **JY-fMRItoolbox**, a MATLAB toolbox for fMRI preprocessing, analysis, and visualization.  
-This toolbox supports naturalistic paradigms, network-level analyses, and interactive visualization.
-
 .. note::
 
    All example data is synthetic for demonstration purposes.
 
-Welcome! This page gives an overview of the toolbox.
+This page gives an overview of the toolbox.
 
 
 .. toctree::
