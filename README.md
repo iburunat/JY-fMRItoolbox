@@ -2,10 +2,15 @@
   <img src="source/_static/logo.png" alt="JY-fMRItoolbox logo" height="170"/>
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <i>A lightweight, transparent MATLAB toolbox for human fMRI analysis. </br>
   Built for continuous-feature, naturalistic paradigms, where conventional GLM approaches fall short.   </br>
 In active use since 2012. Now publically available.</i>
+</p> -->
+
+<p align="center">
+  <i>A lightweight, transparent MATLAB toolbox for human fMRI analysis.</i><br>
+  Designed for researchers who want full control and transparency over every step of fMRI analysis.
 </p>
 
 <p align="center">
